@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renta Discos</title>
+</head>
+<style>
+    body{
+        background-image: url(../img/pexels-alexander.jpg);
+    }
+    p{
+        font-family: monospace;
+        font-size: x-large;
+        padding-top: 30px;
+        height: 100px;
+    }
+    div{
+        color: aliceblue;
+    }
+    
+    h2{
+       color: burlywood;
+    }
+    .menu{
+    list-style: none;
+    padding: 0;
+    /*background: #0e0e0e;*/
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    background-position: right;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+.menu li a:hover{
+    background: burlywood;
+}
+
+
+
+</style>
+<body>
+    <center>
+        <ul class="menu">
+            <li><a href="../inicio2.html">Pagina Principal</a></li>
+            <li><a href="../paginas/catalogo.html">Catalogo</a></li>
+            <li><a href="../paginas/jazz.html">Jazz</a></li>
+            <li><a href="../paginas/rock.html">Rock</a></li>
+            <li><a href="../paginas/contactenos.html">Contactenos</a></li>
+        </ul>
+   <div class="reserva">
+        <h2>Reserva la mejor musica aquí</h2>
+<!--Como en todo html,hay que indicar que contenido quiero mostar en el navegador-->
+<!-- en este caso vamos a mostrar un formulario (recolectar informacion)-->
+<!--la primera etiqueta va a ser form-->
+<form action=""><!-- action siempre va a ir un documento que manipule la informacion, es un documento con la extencion .php-->
+    <!--para los titulos de los cajones de texto se hace con la etiqueta label, es opcional, no se necesita para que el formulario funcione correctamente -->
+    <label for=""> Nombre de el usuario </label> <br> 
+    <!-- para agregar el cuadro de texto, donde van a digitar informacion se hace con la etiquta input, recordando que hay varios tipos de input, el general que deja escribir cualquier tipo de texto-->
+<input type="text" name="nombre" placeholder=" Escribe tu nombre "> <br> 
+<!-- Placeholder es un texto guia que se elimina cuando se empíeza a digitar dentro de el cuadro-->
+<label for="">Seleccione su edad</label> <br>
+<input type="number" name="edad" min="18" max="70" placeholder="Tu edad"> <br>
+<!--Con este podemos digitar nuestra edad y podemos darles un minimo y un maximo-->
+<label for="">Digite su fecha de nacimiento</label> <br>
+<input type="date" name="fecha" min="2001-01-02" max="2020-12-01"> <br>
+<label for=""> Numero de contacto</label><br>
+<input type="number" name="numero" placeholder="Numero telefonico"><br>
+<label for=""> ingresa tu fecha de incripcion</label><br>
+<input type="date"name="fecha"id=""><br>
+<!--el tipo de date solo muestra un calendario para seleccionar una fecha (dd/mm/aaaa)-->
+<label for=""> ingresa tu fecha y hora d inscripcion </label><br>
+<input type="datetime-local"name="tiempo local"id="">
+<!-- datetime local es para agregar tanto la fecha competa como la hora --> <br>
+<label for=""> correo electronico</label><br>
+<input type="email"name="correo" id="" placeholder="escribe tu correo electronico"><br>
+<!--email a la hora de enviar la informacion valida que sea tipo correo electronico (que incluye@),pero esa validacion solo la realiza cuando se da clic en el boton enviar y si no cumple con la condicion automaticamente muestra una alerta y hasta que no sea correguido no permite enviar los datos-->
+<label for="">contraseña </label><br>
+<input type="password" name="contraseña" id="" placeholder="escriba una contraseña">
+<!--password es para ocultar lo que se esta digitando -->
+<br>
+<label for="">subir un documento de el ordenador </label>
+<input type="file " name="documento" id=""> <br>
+<label for="">sexo</label><br>
+<input type="radio" name="sexo" id=""> femenino <br>
+<input type="radio" name="sexo" id=""> masculino <br>
+<!-- para que en los tipos radio solo se deje marcar una sola opcion debo de indicar que ambos pertenecen al mismo grupo, agregandoles en el atributo name el mismo nombre-->
+<label for=""> seleccione el genero de interes:</label>
+<input type="checkbox" name="check"id=""> Rock
+<input type="checkbox" name="check"id=""> Jazz 
+<input type="checkbox" name="check"id=""> Classic
+<input type="checkbox" name="check"id=""> Metal <br>
+<label for=""> selecciona una ciudad</label><br>
+<select name="ciudad" id="">
+    <option value="seleccione ....">seleccione ....</option>
+    <option value="Medellin"> Medellin </option>
+    <option value="Bogota"> Bogota</option>
+    <option value="Cali"> Cali </option>
+    <option value="Barranquilla"> Barranquilla </option>
+</select> <br>
+<textarea name="Mensaje" id="" cols="30" rows="10"></textarea><br>
+<input type="submit" value="enviar informacion">
+<!--tipo de submit son los botones que estan anlazados con el atributo action, son los que permiten enviar la informacion -->
+<input type="button" value="enviar informacion">
+<!-- los tipo button son estaticos,quiere decir que no tienen relacion con el atributo actio, se utilizan mucho para ser enlaces-->
+<input type="reset" value="limpiar los campos">
+<!--es para limpiar los datos ya escritos en el formulario-->
+</form>
+</div>
+</center>
+</body>
+</html>
